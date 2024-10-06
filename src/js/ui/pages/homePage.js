@@ -22,11 +22,6 @@ const createHomePageTemplate = (rootNode) => {
     <section class="section purple"></section>
     <section class="section happens_blog"></section>
     <section class="section footer"></section>
-    <section class="section copyright">
-        <div class="copyright__text">
-          © 2023 GPT-3. Все права защищены.
-        </div>
-      </section>
   `;
 
   rootNode.insertAdjacentHTML("beforeend", template); 

@@ -45,10 +45,10 @@ const blog__small= [
     },
 ]
 
-const happens_blog={
+const happensBlogData={
     header,
     blog__item__large,
     blog__small,
 }
 
-export default happens_blog
+export default happensBlogData

@@ -82,14 +82,23 @@ export const createRealContactsTemplate = (contacts) => {
         .join("");
 };
 
+export const createCopyrightTemplate = (copyrightText) => {
+    return `
+    <div class="copyright__text">
+        ${copyrightText}
+    </div>
+  `;
+};
+
 export const footerTemplate = ({
-  header,
-  footerCtaButtons,
-  image,
-  gpt3,
-  ssilki,
-  company,
-  contacts,
+    header,
+    footerCtaButtons,
+    image,
+    gpt3,
+    ssilki,
+    company,
+    contacts,
+    copyrightText,
 }) => {
     const headerTemplate = createHeaderTemplate(header);
     const footerCtaButtonsTemplate = createButtonsTemplate(footerCtaButtons);
@@ -98,6 +107,7 @@ export const footerTemplate = ({
     const ssilkiTemplate=createRealSsilkiTemplate(ssilki)
     const companyTemplate=createRealCompanyTemplate(company)
     const contactsTemplate=createRealContactsTemplate(contacts)
+    const copyrightTemplate = createCopyrightTemplate(copyrightText);
 
     return `
         <div class="future__step">
@@ -134,5 +144,6 @@ export const footerTemplate = ({
             ${contactsTemplate}
           </div>
         </div>
+        ${copyrightTemplate}
     `;
 };

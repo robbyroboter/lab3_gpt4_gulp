@@ -665,10 +665,12 @@ p {
 
 /*copyright*/
 
-.copyright .copyright__text{
+.copyright__text{
   text-align: center;
   font-size: 9px;
   color: white;
+  background: #031b34;
+  width: 100%;
 }
 
 /* Медиа запросы для адаптива */

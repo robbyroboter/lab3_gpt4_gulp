@@ -67,6 +67,9 @@ const contacts=[
     },
 ]
 
+const copyrightText=
+    "© 2023 GPT-3. Все права защищены.";
+
 const footerData={
     header,
     footerCtaButtons,
@@ -75,6 +78,7 @@ const footerData={
     ssilki,
     company,
     contacts,
+    copyrightText,
 }
 
 export default footerData
