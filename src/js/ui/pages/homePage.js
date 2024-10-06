@@ -4,8 +4,10 @@ import initBrands from "./../components/initBrands.js";
 import initWhatIsGpt from "./../components/initWhatIsGpt.js";
 import initFutureHere from "./../components/initFutureHere.js";
 import initBurger from "./../components/initBurger.js";
-import {init} from "browser-sync";
 import initVr from "../components/initVr.js";
+import initPurple from "../components/initPurple.js";
+import initHappensBlog from "../components/initHappensBlog.js";
+import initFooter from "../components/initFooter.js";
 
 const createHomePageTemplate = (rootNode) => {
   // формируем шаблон базовых секций для дальнейшего монтирования в них
@@ -17,6 +19,14 @@ const createHomePageTemplate = (rootNode) => {
     <section class="section what_is_chatgpt_section"></section>
     <section class="section future_here"></section>
     <section class="section vr"></section>
+    <section class="section purple"></section>
+    <section class="section happens_blog"></section>
+    <section class="section footer"></section>
+    <section class="section copyright">
+        <div class="copyright__text">
+          © 2023 GPT-3. Все права защищены.
+        </div>
+      </section>
   `;
 
   rootNode.insertAdjacentHTML("beforeend", template); 
@@ -49,6 +59,15 @@ const homePage = () => {
 
   const vrNode = rootNode.querySelector(".vr");
   initVr(vrNode);
+
+  const purpleNode=rootNode.querySelector(".purple")
+  initPurple(purpleNode)
+
+  const happensBlogNode=rootNode.querySelector(".happens_blog")
+  initHappensBlog(happensBlogNode)
+
+  const footerNode=rootNode.querySelector(".footer")
+  initFooter(footerNode)
 
   // инициализация бургера для адаптивного меню
   initBurger(headerNode);

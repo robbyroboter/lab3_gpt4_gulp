@@ -14,7 +14,7 @@ const whatIsGptMiddleData = {
 
 const whatIsGptBottomData = [
   {
-    header: "Чатботы",
+    header: "Чат боты",
     content:
       "Мы так мнение друзей мне сообщаем как восторг. Вся передняя часть тарелки слышна ох как надо.",
   },

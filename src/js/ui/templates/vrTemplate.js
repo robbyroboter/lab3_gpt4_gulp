@@ -1,6 +1,3 @@
-import {text} from "../../mockData/vrData.js";
-import {createDescriptionTemplate, createIllustrationTemplate, createInputsTemplate} from "./heroTemplate.js";
-
 export const createWomanImageTemplate = ({ src, alt }) => {
     return `
     <img src="${src}" alt="${alt}" />
@@ -17,9 +14,9 @@ export const createTextTemplate=(text)=> {
 
 export const createHeaderTemplate = (header) => {
     return `
-    <h1 class="right__header">
+    <h2 class="right__header">
       ${header}
-    </h1>
+    </h2>
   `;
 };
 
@@ -47,15 +44,9 @@ export const vrTemplate = ({
             ${womanImageTemplate}
         </div>
         <div class="vr_right">
-          <p class="blue__text">
-            ${textTemplate}
-          </p>
-          <h2 class="right__header">
-            ${headerTemplate}
-          </h2>
-          <p class="container__content">
-            ${contentTemplate}
-          </p>
+          ${textTemplate}
+          ${headerTemplate}
+          ${contentTemplate}
           <a href="#" class="right__cta">Запросить ранний доступ</a>
         </div>
         `;

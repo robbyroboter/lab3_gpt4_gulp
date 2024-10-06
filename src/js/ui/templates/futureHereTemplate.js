@@ -1,5 +1,5 @@
 export const rightContainerTemplate = ({ title, description }) => {
-  const template = `
+    return `
     <div class="right__container">
       <h3 class="container__header lined_header">
           ${title}
@@ -9,12 +9,10 @@ export const rightContainerTemplate = ({ title, description }) => {
       </p>
     </div>
 `;
-
-  return template;
 };
 
 export const futureHereTemplate = (data) => {
-  const rightContainerTpl = data.map((item) => rightContainerTemplate(item));
+  const rightContainerTpl = data.map((item) => rightContainerTemplate(item)).join('');
 
   const parentTemplate = `
     <div class="future_here__left">
@@ -27,7 +25,5 @@ export const futureHereTemplate = (data) => {
     <div class="future_here__right">
 `;
 
-  const resultTemplate = parentTemplate + rightContainerTpl + `</div>`;
-
-  return resultTemplate;
+  return parentTemplate + rightContainerTpl + `</div>`;
 };
